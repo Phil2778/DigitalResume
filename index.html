@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Philipine - Mode Histoire</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="game">
+
+        <!-- ÉCRAN DE DÉMARRAGE -->
+        <section id="start-screen">
+
+            <h1>PHILIPINE</h1>
+
+            <button id="start-button">
+                ▶ Mode Histoire
+            </button>
+
+        </section>
+
+
+        <!-- JEU -->
+        <section id="game-screen">
+
+            <div id="map">
+
+                <div id="main-path"></div>
+
+                <div id="path-cergy"></div>
+
+                <img id="lycee" src="images/lycee.png" alt="Lycée">
+
+                <img id="cergy" src="images/cergy.png" alt="CY Cergy Paris Université">
+
+                <img id="centre-loisirs"
+                     src="images/centre-loisirs.png"
+                     alt="Centre de loisirs">
+
+                <img id="golf"
+                     src="images/golf.png"
+                     alt="Golf Bluegreen">
+
+                <img id="montpellier"
+                     src="images/montpellier.png"
+                     alt="Master à distance - Université Montpellier 3">
+
+                <div id="path-xpertech"></div>
+
+                <img id="xpertech"
+                     src="images/xpertech.png"
+                     alt="XperTech">
+
+                <div id="player">
+                    <img src="images/player-down.png" alt="Philipine">
+                </div>
+
+                <!-- Message pour indiquer qu'on peut interagir -->
+                <div id="interaction-message">
+                    E — Interagir
+                </div>
+
+                <!-- Boîte de dialogue -->
+                <div id="dialogue-box">
+                    <p id="dialogue-text"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+/* =================
+   RÉGLAGES GÉNÉRAUX
+   ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==================
+   ÉCRAN DE DÉMARRAGE
+   ================== */
+
+#start-screen {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #87ceeb;
+}
+
+#start-screen h1 {
+    font-size: 70px;
+    margin-bottom: 50px;
+    letter-spacing: 8px;
+}
+
+#start-button {
+    padding: 15px 30px;
+
+    font-size: 22px;
+    font-family: monospace;
+
+    background-color: white;
+    border: 4px solid black;
+
+    cursor: pointer;
+}
+
+#start-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ============
+   ÉCRAN DU JEU
+   ============ */
+
+#game-screen {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #222;
+}
+
+
+/* =================
+   MAP ÎLE-DE-FRANCE
+   ================= */
+
+#map {
+    position: relative;
+
+    width: 900px;
+    height: 600px;
+
+    /*
+       Toute la map est maintenant
+       contenue dans une seule image.
+    */
+    background-image: url("images/fond.png");
+
+    /*
+       Force l'image à prendre exactement
+       les dimensions de notre map.
+    */
+    background-size: 900px 600px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: 6px solid black;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   ANCIENS ÉLÉMENTS DU DÉCOR
+   ========================= */
+
+/*
+   Les bâtiments et chemins sont encore
+   présents dans index.html
+
+   On les cache car ils sont
+   maintenant dessinés directement dans fond.png
+*/
+
+#main-path,
+#path-cergy,
+#path-xpertech,
+#lycee,
+#cergy,
+#centre-loisirs,
+#golf,
+#montpellier,
+#xpertech {
+    display: none;
+}
+
+
+/* ==========
+   PERSONNAGE
+   ========== */
+
+#player {
+    position: absolute;
+
+    width: 55px;
+    height: 95px;
+
+    left: 423px;
+    top: 470px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+
+    /*
+       Philipine doit toujours être
+       au-dessus du fond de la map.
+    */
+    z-index: 5;
+}
+
+
+/* Image du personnage */
+
+#player img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    image-rendering: pixelated;
+}
+
+
+/* =====================
+   MESSAGE E — INTERAGIR
+   ===================== */
+
+#interaction-message {
+    display: none;
+
+    position: absolute;
+
+    bottom: 120px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 8px 14px;
+
+    background-color: white;
+    border: 3px solid black;
+
+    font-family: monospace;
+    font-size: 16px;
+
+    z-index: 10;
+}
+
+
+/* =================
+   BOÎTE DE DIALOGUE
+   ================= */
+
+#dialogue-box {
+    display: none;
+
+    position: absolute;
+
+    left: 40px;
+    right: 40px;
+    bottom: 25px;
+
+    min-height: 110px;
+
+    padding: 18px 22px;
+
+    background-color: white;
+    border: 5px solid black;
+
+    font-family: monospace;
+    font-size: 18px;
+
+    z-index: 20;
+}
+
+#dialogue-text {
+    line-height: 1.5;
+}
+
+/* =================
+   RESPONSIVE DU JEU
+   ================= */
+
+#game-screen {
+    overflow: hidden;
+}
+
+#map {
+    width: 900px;
+    height: 600px;
+    flex-shrink: 0;
+    transform-origin: center center;
+}
